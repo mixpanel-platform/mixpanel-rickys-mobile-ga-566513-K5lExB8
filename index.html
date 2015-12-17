@@ -18,18 +18,18 @@
     <div id="table"></div>
     <script>
       $(document).ready(function() {
-        MP.api.segment('App Open', {limit: 10}).done(function(results) {
+        var params = {
+          type: 'total'
+          unit: 'week'
+          interval: 3
+        };
+        MP.api.events('App Open', 'App Install', params).done(function(results) {
+          console.log('got results', results.values());
           $('<div></div>').appendTo('body').MPTable({ // create table; try scrolling horizontally over demo below
               data: results,
               showPercentages: true,
               firstColHeader: 'App Open'
           });
-        MP.api.segment('App Install').done(function(results) {
-          $('<div></div>').appendTo('body').MPTable({
-              data: results,
-              showPercentages: true,
-              firstColHeader: 'App Install'
-        });
         });
       });
     </script>
