@@ -19,8 +19,8 @@
     <script>
       $(document).ready(function() {
         var params = {
-          type: 'total',
-          unit: 'general',
+          type: 'general',
+          unit: 'week',
           interval: 3
         };
         MP.api.events('App Open', 'App Install', params).done(function(results) {
