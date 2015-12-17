@@ -20,7 +20,7 @@
       $(document).ready(function() {
         var params = {
           type: 'total'
-          unit: 'week'
+          unit: 'general'
           interval: 3
         };
         MP.api.events('App Open', 'App Install', params).done(function(results) {
@@ -31,7 +31,7 @@
               firstColHeader: 'App Open'
           });
         });
-      });
+      }); 
     </script>
   </body>
 </html>
