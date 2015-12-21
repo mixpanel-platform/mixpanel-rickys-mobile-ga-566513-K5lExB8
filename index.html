@@ -20,8 +20,8 @@
       $(document).ready(function() {
         var params = {
           type: 'general',
-          unit: 'week',
-          interval: 3
+          unit: 'month',
+          interval: 2
         };
         MP.api.events('App Open', 'App Install', params).done(function(results) {
           console.log('got results', results.values());
