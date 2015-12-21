@@ -25,6 +25,8 @@
         };
         MP.api.events('App Open', 'App Install', params).done(function(results) {
           console.log('got results', results.values());
+          values = results.values()
+          debugger
           $('<div></div>').appendTo('body').MPTable({ // create table; try scrolling horizontally over demo below
               data: results,
               showPercentages: true,
